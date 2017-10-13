@@ -25,6 +25,7 @@ state={ loggedIn: false };
         this.setState({ loggedIn: false });
     }
   });
+<<<<<<< HEAD
   }
 
   renderContent() {
@@ -41,7 +42,30 @@ state={ loggedIn: false };
       } else if (this.state.loggedIn !== true) {
         return <Spinner size='large' />;
       } return <Spinner size='small' />;
+=======
+>>>>>>> eb1c26c22a3984a79ebefe7883d678ecf512084f
   }
+
+  renderContent() {
+    if (this.state.loggedIn) {
+        return (
+       <Card>
+         <CardSection>
+            <Button onPress={() => firebase.auth().signOut()}> Log out </Button>
+         </CardSection>
+      </Card>
+        );
+      }
+      else if(this.state.loggedIn === false){
+        return <LoginForm />;
+      }
+      else if (this.state.loggedIn!=true){
+        return <Spinner size='large' />;
+      }
+      else return <Spinner size='small' />;
+
+      }
+
 
   render() {
     return (
