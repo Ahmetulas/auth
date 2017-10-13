@@ -36,17 +36,12 @@ state={ loggedIn: false };
          </CardSection>
       </Card>
         );
-      }
-      else if(this.state.loggedIn === false){
+      } else if (this.state.loggedIn === false) {
         return <LoginForm />;
-      }
-      else if (this.state.loggedIn!=true){
+      } else if (this.state.loggedIn !== true) {
         return <Spinner size='large' />;
-      }
-      else return <Spinner size='small' />;
-
-      }
-
+      } return <Spinner size='small' />;
+  }
 
   render() {
     return (
